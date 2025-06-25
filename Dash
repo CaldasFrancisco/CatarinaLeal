@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indicadores Financeiros - Dashboard</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0;
+        }
+        
+        th {
+            background-color: #f8f9fa;
+            color: #495057;
+            font-weight: 600;
+            padding: 16px 12px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        td {
+            padding: 16px 12px;
+            border-bottom: 1px solid #e9ecef;
+            font-size: 14px;
+        }
+        
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .indicador {
+            font-weight: 600;
+            color: #343a40;
+        }
+        
+        .valor {
+            font-family: 'Courier New', monospace;
+            font-weight: 500;
+        }
+        
+        .diferenca {
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .diferenca.negativa {
+            color: #dc3545;
+        }
+        
+        .icon {
+            font-size: 16px;
+        }
+        
+        .percentage {
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 8px;
+            }
+            
+            th, td {
+                padding: 12px 8px;
+                font-size: 13px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Relatório de Indicadores Financeiros</h1>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Maio 2025</th>
+                    <th>Junho 2025</th>
+                    <th>Diferença</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="indicador">Faturamento Líquido</td>
+                    <td class="valor">R$ 109.837,64</td>
+                    <td class="valor">R$ 56.288,50</td>
+                    <td class="diferenca negativa">
+                        <span class="icon">🔻</span>
+                        <span>R$ 53.549,14</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indicador">Gastos com Anúncios</td>
+                    <td class="valor">R$ 51.528,23</td>
+                    <td class="valor">R$ 30.428,92</td>
+                    <td class="diferenca negativa">
+                        <span class="icon">🔻</span>
+                        <span>R$ 21.099,31</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indicador">Lucro Líquido</td>
+                    <td class="valor">R$ 58.309,41</td>
+                    <td class="valor">R$ 25.859,58</td>
+                    <td class="diferenca negativa">
+                        <span class="icon">🔻</span>
+                        <span>R$ 32.449,83</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indicador">ROAS</td>
+                    <td class="valor">2.13</td>
+                    <td class="valor">1.85</td>
+                    <td class="diferenca negativa">
+                        <span class="icon">🔻</span>
+                        <span>-0.28</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indicador">Margem de Lucro</td>
+                    <td class="valor percentage">53,1%</td>
+                    <td class="valor percentage">45,9%</td>
+                    <td class="diferenca negativa">
+                        <span class="icon">🔻</span>
+                        <span>-7,2%</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indicador">Vendas Pendentes</td>
+                    <td class="valor">R$ 13.804,09</td>
+                    <td class="valor">R$ 9.953,33</td>
+                    <td class="diferenca negativa">
+                        <span class="icon">🔻</span>
+                        <span>R$ 3.850,76</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indicador">Reembolsos</td>
+                    <td class="valor">R$ 3.350,81</td>
+                    <td class="valor">R$ 2.659,61</td>
+                    <td class="diferenca negativa">
+                        <span class="icon">🔻</span>
+                        <span>R$ 691,20</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
